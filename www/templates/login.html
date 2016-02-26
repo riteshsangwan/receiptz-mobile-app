@@ -1,0 +1,27 @@
+<ion-view class="login">
+  <ion-content scroll="true" padding="true">
+    <ion-item class="no-border logo">
+      <img src="img/logo.svg">
+      <p class="text-center">ReceiptZ</p>
+    </ion-item>
+    <div class="list auth-form">
+      <p class="text-danger text-center" data-ng-if="error">{{errorMessage}}</p>
+      <label class="item item-input">
+        <input data-ng-model="credentials.username" type="text" placeholder="email or mobile" required>
+      </label>
+      <label class="item item-input">
+        <input data-ng-model="credentials.password" type="password" placeholder="password" required>
+      </label>
+      <li class="item item-checkbox no-border">
+        <label class="checkbox">
+          <input type="checkbox" data-ng-model="credentials.rememberMe">
+        </label>
+        <p>Remember me</p>
+      </li>
+      <button class="button button-block button-positive" data-ng-click="login(credentials)">Login</button>
+    </div>
+    <ion-item class="no-border">
+      <p class="text-center">Don't have an account? <a ui-sref="register">Register</a></p>
+    </ion-item>
+  </ion-content>
+</ion-view>

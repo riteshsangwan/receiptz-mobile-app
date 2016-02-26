@@ -1,0 +1,35 @@
+<ion-view class="login">
+  <ion-content scroll="true" padding="true">
+    <ion-item class="no-border">
+      <p class="text-center">Register</p>
+    </ion-item>
+    <div class="list auth-form">
+      <p class="text-danger text-center" data-ng-if="error">{{errorMessage}}</p>
+      <label class="item item-input">
+        <input data-ng-model="user.firstName" type="text" placeholder="First Name" required>
+      </label>
+      <label class="item item-input">
+        <input data-ng-model="user.lastName" type="text" placeholder="Last Name" required>
+      </label>
+      <label class="item item-input">
+        <input data-ng-model="user.mobileNumber" type="text" placeholder="Mobile Number" required>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">Country</div>
+        <select data-ng-model="user.country.name">
+          <option selected="selected" value="India">India</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <input data-ng-model="user.email" type="email" placeholder="Email" required>
+      </label>
+      <label class="item item-input">
+        <input data-ng-model="user.password" type="password" placeholder="Password" required>
+      </label>
+      <button class="button button-block button-positive" data-ng-click="register(user)">Register</button>
+    </div>
+    <ion-item class="no-border">
+      <p class="text-center">Already have an account? <a ui-sref="login">Login</a></p>
+    </ion-item>
+  </ion-content>
+</ion-view>

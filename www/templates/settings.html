@@ -1,0 +1,16 @@
+<ion-view view-title="Settings">
+  <ion-content scroll="false" padding="true">
+    <ion-list>
+      <ion-item class="item-toggle no-border">
+        Enable Notification
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" data-ng-model="settings.enableNotification">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </ion-item>
+    </ion-list>
+    <button class="button button-light button-block" data-ng-click="saveSettings(settings)">Save</button>
+  </ion-content>
+</ion-view>

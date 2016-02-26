@@ -1,0 +1,28 @@
+<ion-view view-title="Receipt Detail">
+  <ion-content>
+    <ion-item class="no-border no-padding card">
+      <a class="item item-thumbnail-left" href="#">
+        <img src="http://placehold.it/300x150&text=STORE">
+        <h2>{{receipt.organization.name}}</h2>
+        <p class="text-left">{{receipt.organization.streetAddress}}</p>
+        <p class="text-left">{{receipt.organization.city}}, {{receipt.organization.state}}</p>
+      </a>
+      <div class="item item-body">
+        <div class="row">
+          <span><small>{{receipt.id | formattedDateFromObjectId}}</small></span>
+        </div>
+        <div class="row" data-ng-repeat="item in receipt.items">
+          <div class="row receipt-item">
+            <div class="col"><p>{{item.name}}</p></div>
+            <div class="col"><p>x {{item.qty || 1}}</p></div>
+            <div class="col col-33"><p class="text-right">{{item.price | currency : ""}}</p></div>
+          </div>
+        </div>
+        <div class="row receipt-item-footer">
+          <div class="col col-100">
+            <p class="text-right">Total: <strong>{{receipt.amount | currency: "INR "}}</strong></p>
+          </div>
+        </div>
+    </ion-item>
+  </ion-content>
+</ion-view>

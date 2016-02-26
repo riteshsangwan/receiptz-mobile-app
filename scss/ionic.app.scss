@@ -1,0 +1,106 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+$positive: #F44D6A;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+$danger: #ff0000;
+
+
+.no-border {
+  border: none;
+}
+.no-padding {
+  padding: 0;
+}
+.no-margin {
+  margin: 0;
+}
+
+.login {
+  .logo {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    img {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      height: 120px;
+      width: 200px;
+    }
+  }
+  .auth-form {
+    .item.item-input {
+      margin-bottom: 10px;
+    }
+    .item.item-input:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.text-danger {
+  color: $danger;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.card {
+  .row.card-footer {
+    background: $stable;
+  }
+}
+
+.logo-container {
+  min-height: 40px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.address {
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.info {
+  font-size: 0.9em !important;
+}
+
+.receipt-item {
+  p{
+    font-size: 0.8em !important;
+  }
+}
+
+
+.receipt-item-footer {
+  background : $positive;
+  p {
+    color: $light;
+  }
+}

@@ -1,0 +1,27 @@
+<ion-view view-title="Receipts">
+  <ion-content>
+    <ion-item data-ng-click="showDetail(receipt)" class="no-border no-padding card" data-ng-repeat="receipt in receiptsList">
+      <div class="row">
+        <div class="col">
+          <h2>{{receipt.organization.name}}</h2>
+            <p class="address">
+            <p class="text-left">{{receipt.organization.streetAddress}}</p>
+            <p class="text-left">{{receipt.organization.city}}, {{receipt.organization.state}}</p>
+            <p class="info">
+              <span class="ion-clock">
+                <span am-time-ago="{{receipt.id | dateFromObjectId}}"></span>
+              </span>
+            </p>
+        </div>
+        <div class="col col-33">
+          <div class="loading logo-container"
+              rn-lazy-background="'http://placehold.it/100x50&text=STORE'"
+              rn-lazy-loading-class="loading"
+              rn-lazy-loaded-class="loaded">
+          </div>
+          <h2>{{receipt.amount | currency: "INR "}}</h2>
+        </div>
+      </div>
+    </ion-item>
+  </ion-content>
+</ion-view>
