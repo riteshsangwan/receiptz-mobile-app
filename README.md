@@ -1,4 +1,4 @@
-billid: PoC mobile app
+receiptz: Customer mobile app
 ---
 
 The following plugins are required for this application to work properly
